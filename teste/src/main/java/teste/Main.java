@@ -1,7 +1,7 @@
-package com.example;
+package teste;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Benkas safada!");
+        System.out.println("Hello world!");
     }
 }
