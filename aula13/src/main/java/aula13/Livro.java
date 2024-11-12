@@ -83,7 +83,11 @@ public class Livro implements Publicacao {
     @Override
     public void folhear(int p) {
         if (p > this.totPaginas) {
+            this.setPagAtual(this.totPaginas);
+            System.out.println("Nao ha tantas paginas. Voce foi para a ultima pagina.");
+        } else if (p < 0) {
             this.setPagAtual(0);
+            System.out.println("Voce foi para a primeira pagina.");
         } else {
             this.setPagAtual(p);
         }
@@ -91,13 +95,20 @@ public class Livro implements Publicacao {
 
     @Override
     public void avancarPag() {
-        this.setPagAtual(this.getPagAtual() + 1);
+        if (this.getPagAtual() < this.getTotPaginas()) {
+            this.setPagAtual(this.getPagAtual() + 1);
+        } else {
+            System.out.println("Voce ja esta na ultima pagina.");
+        }
     }
 
     @Override
     public void voltarPag() {
-        this.setPagAtual(this.getPagAtual() - 1);
-
+        if (this.getPagAtual() > 0) {
+            this.setPagAtual(this.getPagAtual() - 1);
+        } else {
+            System.out.println("Voce ja esta na primeira pagina.");
+        }
     }
 
     
