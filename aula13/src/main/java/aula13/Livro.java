@@ -67,7 +67,7 @@ public class Livro implements Publicacao {
 
     public String detalhes() {
         return "Livro [titulo=" + titulo + ", autor=" + autor + ", totPaginas=" + totPaginas + ", pagAtual=" + pagAtual
-                + ", aberto=" + aberto + ", leitor=" + leitor + "]";
+                + ", aberto=" + aberto + ", leitor=" + leitor.getNome() + ", sexo="+ leitor.getSexo()+", idade="+ leitor.getIdade()+"]";
     }
 
     @Override

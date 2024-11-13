@@ -13,7 +13,7 @@ public class Main {
         l[2] = new Livro("A volta sem ir", "Jonas Confuso", 800, p[0]);
  
         l[0].abrir();
-        l[0].folhear(500);
+        l[0].folhear(299);
         l[0].avancarPag();
         //l[0].avancarPag();
         //l[0].voltarPag();
